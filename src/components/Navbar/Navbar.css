@@ -19,11 +19,7 @@
 .nav-menu {
     display: flex;
     align-items: center;
-    list-style: none;
     gap: 50px;
-    color: #626262;
-    font-size: 16px;
-    font-weight: bold;
 }
 
 .nav-menu li {
@@ -68,4 +64,16 @@
     background-color: #47d4e5;
     color: #fff;
     margin: -28px 0 0 -48px;
+}
+
+.nav-menu-item {
+    list-style: none;
+    color: #626262;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.nav-menu-item__active {
+    color: #47d4e5;
 }

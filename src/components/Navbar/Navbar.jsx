@@ -19,7 +19,7 @@ function Navbar() {
                         setMenu('home');
                     }}
                 >
-                    <Link style={{ textDecoration: 'none', color: menu === 'home' ? '#47d4e5' : '#626262' }} to="/">
+                    <Link className={`nav-menu-item ${menu === 'home' ? 'nav-menu-item__active' : ''}`} to="/">
                         Home
                     </Link>
                 </li>
@@ -28,7 +28,7 @@ function Navbar() {
                         setMenu('nemo');
                     }}
                 >
-                    <Link style={{ textDecoration: 'none', color: menu === 'nemo' ? '#47d4e5' : '#626262' }} to="/nemo">
+                    <Link className={`nav-menu-item ${menu === 'nemo' ? 'nav-menu-item__active' : ''}`} to="/nemo">
                         Betta Nemo
                     </Link>
                 </li>
@@ -37,10 +37,7 @@ function Navbar() {
                         setMenu('galaxy');
                     }}
                 >
-                    <Link
-                        style={{ textDecoration: 'none', color: menu === 'galaxy' ? '#47d4e5' : '#626262' }}
-                        to="/galaxy"
-                    >
+                    <Link className={`nav-menu-item ${menu === 'galaxy' ? 'nav-menu-item__active' : ''}`} to="/galaxy">
                         Betta Galaxy
                     </Link>
                 </li>
@@ -50,7 +47,7 @@ function Navbar() {
                     }}
                 >
                     <Link
-                        style={{ textDecoration: 'none', color: menu === 'halfmoon' ? '#47d4e5' : '#626262' }}
+                        className={`nav-menu-item ${menu === 'halfmoon' ? 'nav-menu-item__active' : ''}`}
                         to="/halfmoon"
                     >
                         Betta Halfmoon{' '}
