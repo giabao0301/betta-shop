@@ -1,9 +1,14 @@
 import React from 'react';
+import Hero from '../components/Hero/Hero';
+import Popular from '../components/Popular/Popular';
 
 function Home() {
-    return ( 
-        <div>Home</div>
-     );
+    return (
+        <>
+            <Hero />
+            <Popular />
+        </>
+    );
 }
 
 export default Home;

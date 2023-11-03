@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import logo from '../assets/logo.png';
-import './Navbar.css';
+import styles from './Navbar.module.css';
 import { FaCartShopping } from 'react-icons/fa6';
 import { Link } from 'react-router-dom';
 
@@ -8,19 +8,22 @@ function Navbar() {
     const [menu, setMenu] = useState('home');
 
     return (
-        <div className="navbar">
-            <div className="nav-logo">
+        <div className={styles.nav}>
+            <div className={styles['nav__logo']}>
                 <img src={logo} alt="logo" />
                 <p>BettaShop</p>
             </div>
-            <ul className="nav-menu">
+            <ul className={styles['nav__menu']}>
                 <li
                     onClick={() => {
                         setMenu('home');
                     }}
                 >
-                    <Link className={`nav-menu-item ${menu === 'home' ? 'nav-menu-item__active' : ''}`} to="/">
-                        Home
+                    <Link
+                        className={`${styles['nav__menu-item']} ${menu === 'home' && styles['nav__menu-item--active']}`}
+                        to="/"
+                    >
+                        Trang chủ
                     </Link>
                 </li>
                 <li
@@ -28,7 +31,10 @@ function Navbar() {
                         setMenu('nemo');
                     }}
                 >
-                    <Link className={`nav-menu-item ${menu === 'nemo' ? 'nav-menu-item__active' : ''}`} to="/nemo">
+                    <Link
+                        className={`${styles['nav__menu-item']} ${menu === 'nemo' && styles['nav__menu-item--active']}`}
+                        to="/nemo"
+                    >
                         Betta Nemo
                     </Link>
                 </li>
@@ -37,7 +43,12 @@ function Navbar() {
                         setMenu('galaxy');
                     }}
                 >
-                    <Link className={`nav-menu-item ${menu === 'galaxy' ? 'nav-menu-item__active' : ''}`} to="/galaxy">
+                    <Link
+                        className={`${styles['nav__menu-item']} ${
+                            menu === 'galaxy' && styles['nav__menu-item--active']
+                        }`}
+                        to="/galaxy"
+                    >
                         Betta Galaxy
                     </Link>
                 </li>
@@ -47,21 +58,23 @@ function Navbar() {
                     }}
                 >
                     <Link
-                        className={`nav-menu-item ${menu === 'halfmoon' ? 'nav-menu-item__active' : ''}`}
+                        className={`${styles['nav__menu-item']} ${
+                            menu === 'halfmoon' && styles['nav__menu-item--active']
+                        }`}
                         to="/halfmoon"
                     >
                         Betta Halfmoon{' '}
                     </Link>
                 </li>
             </ul>
-            <div className="nav-login-cart">
+            <div className={styles['nav__login-cart']}>
                 <Link to="/login">
                     <button>Login</button>
                 </Link>
                 <Link to="/cart">
-                    <FaCartShopping color="#626262" />
+                    <FaCartShopping className={styles['nav__cart-icon']} color="#626262" />
                 </Link>
-                <div className="nav-cart-count">0</div>
+                <div className={styles['nav__cart-count']}>0</div>
             </div>
         </div>
     );
