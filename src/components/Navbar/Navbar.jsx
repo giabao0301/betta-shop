@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import logo from '../assets/logo.png';
+import logo from '../assets/images/logo.png';
 import styles from './Navbar.module.css';
 import { FaCartShopping } from 'react-icons/fa6';
 import { Link } from 'react-router-dom';
