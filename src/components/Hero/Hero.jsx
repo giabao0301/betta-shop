@@ -6,7 +6,7 @@ function Hero() {
     return (
         <div className={styles.hero}>
             <div className={styles['hero--left']}>
-                <h1>GIANT BETTA</h1>
+                <h1 className="text-8xl">GIANT BETTA</h1>
                 <p>Màu đẹp nét căng - Form chuẩn</p>
                 <p>Đường nét sắc sảo số 1 để làm giống</p>
                 <a className={styles['hero__btn']}>MUA NGAY</a>

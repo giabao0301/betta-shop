@@ -7,7 +7,8 @@ const Popular = () => {
     return (
         <div className={styles.popular}>
             <h1>Bộ sưu tập mẫu cá betta đẹp nhất 2023</h1>
-            <div className={styles.popular__item}>
+            <hr />
+            <div className={styles['popular-item']}>
                 {data_product.map((item) => {
                     return (
                         <Item

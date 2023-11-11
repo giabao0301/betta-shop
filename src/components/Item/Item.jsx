@@ -3,7 +3,7 @@ import styles from './Item.module.css';
 
 const Item = (props) => {
     return (
-        <div className={styles.item}>
+        <div className="w-80">
             <img src={props.image} alt="" />
             <p>{props.name}</p>
             <div className={styles.item__price}>

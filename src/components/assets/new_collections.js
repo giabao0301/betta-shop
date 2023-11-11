@@ -3,10 +3,10 @@ import img_8486 from './images/8486.jpg';
 let new_collections = [
     {
         id: 12,
-        name: 'Striped Flutter Sleeve Overlap Collar Peplum Hem Blouse',
+        name: 'Koi nemo candy nền vàng cam đẹp Eileithyia',
         image: img_8486,
-        new_price: 50.0,
-        old_price: 80.5,
+        new_price: 140000,
+        old_price: 180000,
     },
 ];
 
