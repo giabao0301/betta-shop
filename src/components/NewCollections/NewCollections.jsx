@@ -1,11 +1,11 @@
 import React from 'react';
-import data_product from '../assets/data';
+import data_product from '../assets/new_collections';
 import Item from '../Item/Item';
 
-const Popular = () => {
+const NewCollections = () => {
     return (
         <div className="md:p-10 p-2.5 mt-8">
-            <h1 className="text-center font-bold text-4xl mb-8">BỘ SƯU TẬP MẪU CÁ BETTA ĐẸP NHẤT 2023</h1>
+            <h1 className="text-center font-bold text-4xl mb-4">MẪU CÁ BETTA HOT</h1>
             <div className="w-fit mx-auto grid grid-cols-2 lg:grid-cols-4 md:grid-cols-2 justify-items-center justify-center md:gap-y-20 gap-y-6 md:gap-x-14 gap-x-4">
                 {data_product.map((item) => {
                     return (
@@ -24,4 +24,4 @@ const Popular = () => {
     );
 };
 
-export default Popular;
+export default NewCollections;
