@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import logo from '../assets/images/logo.png';
 import { FaCartShopping, FaBars } from 'react-icons/fa6';
 import { FaTimes } from 'react-icons/fa';
@@ -27,7 +27,7 @@ function Navbar() {
                 ref={toggleNavbar}
                 className="truncate lg:bg-white bg-slate-200 w-0 lg:flex lg:static absolute lg:min-h-fit min-h-[40vh] lg:mt-0 mt-[62px] right-0 top-[8%] lg:w-auto items-center text-right duration-700"
             >
-                <ul className="flex flex-col lg:flex-row lg:items-center lg:gap-[4vw] gap-8 lg:p-3 p-8 text-xl text-dark">
+                <ul className="flex flex-col lg:flex-row lg:items-center lg:gap-[4vw] gap-8 lg:p-3 p-8  text-dark">
                     <li
                         onClick={() => {
                             setMenu('home');
