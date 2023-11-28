@@ -3,6 +3,12 @@ module.exports = {
     content: ['./src/**/*.{js,jsx,ts,tsx}'],
     theme: {
         extend: {
+            gridTemplateColumns: {
+                cartItem: '0.5fr 2fr 1fr 1fr 1fr 1fr',
+            },
+            margin: {
+                navbarHeight: '80px',
+            },
             colors: {
                 primary: '#087ea4',
                 dark: '#333',

@@ -1,6 +1,6 @@
 import React from 'react';
-import heroImage from '../assets/images/hero-image.png';
-import Button from '../UI/Button';
+import heroImage from '../../../assets/images/hero-image.png';
+import Button from '../../UI/Button';
 
 function Hero() {
     return (
@@ -11,7 +11,7 @@ function Hero() {
                 <p className="lg:text-3xl text-base font-bold lg:my-5 mb-5 text-light">
                     Đường nét sắc sảo số 1 để làm giống
                 </p>
-                <Button title="MUA NGAY" />
+                <Button title="MUA NGAY" className="bg-primary text-white" />
             </div>
             <div className="lg:mx-0 mx-auto animate-fadeInRight">
                 <img className="lg:h-auto h-96 object-cover" src={heroImage} alt="" />

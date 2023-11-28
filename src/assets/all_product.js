@@ -5,8 +5,8 @@ let all_product = [
         id: 1,
         name: 'Koi nemo candy nền vàng cam đẹp Eileithyia',
         image: img_8486,
-        new_price: 140000,
-        old_price: 180000,
+        new_price: 140,
+        old_price: 180,
         category: 'galaxy',
     },
     {
@@ -79,7 +79,7 @@ let all_product = [
         image: img_8486,
         new_price: 140000,
         old_price: 180000,
-        category: 'nemo',
+        category: 'halfmoon',
     },
     {
         id: 11,

@@ -1,19 +1,24 @@
 import React from 'react';
-import useShopContext from '../context/shop-context';
+import Item from '../components/BettaFish/BettaFishItem';
+import Button from '../components/UI/Button';
 import { FaAngleDown } from 'react-icons/fa6';
-import Item from '../components/Item/Item';
+import all_product from '../assets/all_product';
 
 function Category(props) {
-    const { all_product } = useShopContext();
     return (
         <div className="md:p-10 p-2.5 lg:mt-[80px] mt-[64px]">
-            <div className="flex mx-44 my-0 justify-between items-center">
+            <div className="flex mx-44 my-5 justify-between items-center">
                 <p>
-                    <span className="font-[600]">Showing 1-12</span>out of 36 products
+                    <span className="font-[600]">Showing 1-12 </span>out of 36 products
                 </p>
-                <div className="flex items-center py-2.5 px-5 rounded-full border border-[#888] border-solid">
-                    Sort by
-                    <FaAngleDown />
+                <div className="py-2.5 px-2 border-2 border-b-primary border-solid text-sm">
+                    <select name="sort" id="" className="focus:outline-none">
+                        <option>Random</option>
+                        <option>Thứ tự theo mức phổ biến</option>
+                        <option>Mới nhất</option>
+                        <option>Thứ tự theo giá: thấp đến cao</option>
+                        <option>Thứ tự theo giá: cao xuống thấp</option>
+                    </select>
                 </div>
             </div>
             <div className="w-fit mx-auto grid grid-cols-2 lg:grid-cols-4 md:grid-cols-2 justify-items-center justify-center md:gap-y-20 gap-y-6 md:gap-x-14 gap-x-4">
@@ -34,9 +39,10 @@ function Category(props) {
                     }
                 })}
             </div>
-            <div className="flex justify-center items-center my-36 mx-auto w-[233px] h-16 rounded-full bg-[#ededed] text-[#787878] text-lg font-medium">
-                Xem thêm
-            </div>
+            <Button
+                title="Xem thêm"
+                className="flex justify-center items-center bg-[#ededed] text-light my-20 mx-auto"
+            />
         </div>
     );
 }

@@ -1,6 +1,6 @@
 import React from 'react';
-import offer_image from '../assets/images/offer-image.png';
-import Button from '../UI/Button';
+import offer_image from '../../../assets/images/offer-image.png';
+import Button from '../../UI/Button';
 const Offers = () => {
     return (
         <div className="hidden w-full h-[60vh] lg:flex mx-auto px-40 bg-primary">
@@ -27,7 +27,7 @@ const Offers = () => {
                 </div>
                 <div className="flex gap-x-8 items-center">
                     <div className="font-bold text-4xl text-white">500.000 VNĐ</div>
-                    <Button title="MUA NGAY" className="!text-primary bg-white" />
+                    <Button title="MUA NGAY" className="text-primary bg-white" />
                 </div>
             </div>
             <div className="flex-1 flex items-center justify-end">

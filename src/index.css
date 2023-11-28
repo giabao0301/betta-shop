@@ -8,9 +8,7 @@
   padding: 0;
 }
 
-:root {
-  --primary: #087ea4;
-}
+:root {}
 
 body {
   margin: 0;
@@ -25,4 +23,8 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.active {
+  color: #087ea4;
 }
