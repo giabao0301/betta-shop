@@ -1,11 +1,7 @@
 import React from 'react';
-import CartItems from '../components/Cart/CartItems';
+import CartList from '../components/Cart/CartList';
 function Cart() {
-    return (
-        <div>
-            <CartItems />
-        </div>
-    );
+    return <CartList />;
 }
 
 export default Cart;

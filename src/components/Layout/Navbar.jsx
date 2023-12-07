@@ -1,10 +1,13 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useContext, useEffect, useRef, useState } from 'react';
 import { FaCartShopping, FaBars } from 'react-icons/fa6';
 import { FaTimes } from 'react-icons/fa';
 import { NavLink, Link } from 'react-router-dom';
 import Button from '../UI/Button';
+import useCartContext from '../../store/cart-context';
 
 function Navbar() {
+    const { items } = useCartContext();
+
     const [navbarIsShown, setNavbarIsShown] = useState(false);
     const toggleNavbar = useRef(null);
     const showNavbarHandler = () => {
@@ -81,7 +84,9 @@ function Navbar() {
                 </NavLink>
                 <NavLink onClick={closeNavbarHandler} to="/cart" className="hidden lg:block relative mr-3">
                     <FaCartShopping className="hover:opacity-80" size={25} color="#626262" />
-                    <span className="absolute text-xs -top-2 -right-3 bg-primary text-white rounded-full px-1">0</span>
+                    <span className="absolute text-xs -top-2 -right-3 bg-primary text-white rounded-full px-1">
+                        {items.length}
+                    </span>
                 </NavLink>
             </div>
             <div className="absolute right-0 mr-8">
