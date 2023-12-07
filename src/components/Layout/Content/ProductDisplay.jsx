@@ -3,9 +3,10 @@ import Button from '../../UI/Button';
 import { FaRegHeart } from 'react-icons/fa6';
 
 const ProductDisplay = (props) => {
+    const { product } = props;
     return (
         <section className="overflow-hidden bg-white">
-            {/* <div className="max-w-6xl px-4 py-4 mx-auto lg:py-8 md:px-6">
+            <div className="max-w-6xl px-4 py-4 mx-auto lg:py-8 md:px-6">
                 <div className="flex flex-wrap -mx-4">
                     <div className="w-full px-4 md:w-1/2 ">
                         <div className="top-0 z-50 overflow-hidden flex gap-5 h-full">
@@ -66,9 +67,9 @@ const ProductDisplay = (props) => {
                             <div className="flex flex-wrap items-center -mx-4 ">
                                 <div className="w-2/3 px-4 mb-4 lg:w-1/2 lg:mb-0">
                                     <Button
-                                        onClick={() => {
-                                            addToCart(product.id);
-                                        }}
+                                        // onClick={() => {
+                                        //     addToCart(product.id);
+                                        // }}
                                         title="Thêm vào giỏ hàng"
                                         className="bg-primary text-white rounded-md"
                                     />
@@ -78,7 +79,7 @@ const ProductDisplay = (props) => {
                         </div>
                     </div>
                 </div>
-            </div> */}
+            </div>
         </section>
     );
 };
