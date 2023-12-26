@@ -11,7 +11,7 @@ const ProductDisplay = (props) => {
     const [quantity, setQuantity] = useState(1);
     const amountInputRef = useRef();
     const { addItem } = useCartContext();
-
+    console.log('re-render');
     const descreaseQuantityHandler = () => {
         setQuantity((prevState) => prevState > 1 && prevState - 1);
     };

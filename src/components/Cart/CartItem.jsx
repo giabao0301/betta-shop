@@ -1,5 +1,14 @@
 import React from 'react';
+import { FaTrash } from 'react-icons/fa';
+import useCartContext from '../../store/cart-context';
+
 const CartItem = (props) => {
+    const { removeAll } = useCartContext();
+
+    const onRemoveHandler = () => {
+        removeAll(props.id);
+    };
+
     const new_price = `${props.new_price},000`;
     return (
         <div className="justify-between mb-6 rounded-lg bg-white p-6 shadow-md sm:flex sm:justify-start">
@@ -27,6 +36,11 @@ const CartItem = (props) => {
                         </button>
                     </div>
                 </div>
+            </div>
+            <div className="flex justify-end mt-4 sm:mt-0">
+                <button onClick={onRemoveHandler} className="text-gray-500 hover:text-red-500">
+                    <FaTrash size={20} />
+                </button>
             </div>
         </div>
     );
