@@ -1,6 +1,45 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router'
+
 function Login() {
+    const [username, setUsername] = useState('');
+    const [password, setPassword] = useState('');
+    const navigate = useNavigate();
+
+    const handleLogin = async () => {
+        try {
+          const response = await fetch('http://localhost:8000/login/', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+              username: username,
+              password: password,
+            }),
+          });
+    
+          if (response.ok) {
+            const data = await response.json();
+            if (data.success){
+                alert('Login Successfully!');
+                // Going to 'Trang chủ'
+                navigate('/')
+            }                
+            else
+                {
+                    alert('Login failed!')
+                }
+          } else {
+            alert('Login failed!');
+          }
+        } catch (error) {
+          console.error('Error:', error);
+        }
+      };
+    
+
     return (
         <section className=" h-screen flex items-center">
             <div className="w-full lg:w-4/12 px-4 mx-auto pt-6">
@@ -13,10 +52,12 @@ function Login() {
                                     className="block uppercase text-blueGray-600 text-xs font-bold mb-2"
                                     for="grid-password"
                                 >
-                                    Email
+                                    Username
                                 </label>
                                 <input
                                     type="email"
+                                    value={username}
+                                    onChange={(e) => setUsername(e.target.value)}
                                     className="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
                                     placeholder="Email"
                                 />
@@ -30,6 +71,8 @@ function Login() {
                                 </label>
                                 <input
                                     type="password"
+                                    value={password}
+                                    onChange={(e) => setPassword(e.target.value)}
                                     className="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
                                     placeholder="Password"
                                 />
@@ -55,7 +98,7 @@ function Login() {
                             <div className="text-center mt-6">
                                 <button
                                     className="bg-primary text-white active:bg-blueGray-600 text-sm font-bold uppercase px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 w-full ease-linear transition-all duration-150"
-                                    type="button"
+                                    type="button" onClick={handleLogin}
                                 >
                                     Đăng nhập
                                 </button>
