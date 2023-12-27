@@ -7,9 +7,9 @@ const Breadcrumb = (props) => {
         <div className="flex items-center gap-2 text-light text-sm font-semibold mt-[100px] mx-[170px] capitalize">
             HOME
             <FaAngleRight />
-            {product.category}
+            {product && <>{product.ma_ca}</>}
             <FaAngleRight />
-            {product.name}
+            {product && <>{product.ten_ca}</>}
         </div>
     );
 };
