@@ -22,16 +22,17 @@ function Login() {
     
           if (response.ok) {
             const data = await response.json();
-            if (data.success){
-                alert('Login Successfully!');
-                // Going to 'Trang chủ'
+            if (data.success && data.role){ // data.role ở đây là lấy is_custommer ở dưới database
+                alert('Login Successfully! - Custommer');
+                // Going to 'Trang chủ'. Account lúc này là custommer
                 navigate('/')
             }                
-            else
-                {
-                    alert('Login failed!')
-                }
-          } else {
+            else if (data.success && !data.role){
+                // Going to http://localhost:8000/admin/ (Trang admin của Django -> mở 1 tab riêng)
+                navigate('/') // Trang chủ bán cá, nhưng account lúc này là admin
+            }
+          } 
+          else {
             alert('Login failed!');
           }
         } catch (error) {
